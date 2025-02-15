@@ -24,6 +24,16 @@ def parse_template(template_file):
 
     return template_channels
 
+# 去除部分字符串
+def process_string(input_string):
+    # 检查字符串是否包含"CCTV"
+    if "CCTV" in input_string:
+        # 使用正则表达式去除"-"、空格和中文字符
+        result = re.sub(r"[-\s\u4e00-\u9fa5]", "", input_string)
+        return result
+    else:
+        return input_string
+
 def fetch_channels(url):
     channels = OrderedDict()
 
@@ -45,6 +55,8 @@ def fetch_channels(url):
                     if match:
                         current_category = match.group(1).strip()
                         channel_name = match.group(2).strip()
+                        # 如果包含CCTV，则去除"-"、空格和中文字符。
+                        channel_name = process_string(channel_name)
                         if current_category not in channels:
                             channels[current_category] = []
                 elif line and not line.startswith("#"):
@@ -61,6 +73,8 @@ def fetch_channels(url):
                     match = re.match(r"^(.*?),(.*?)$", line)
                     if match:
                         channel_name = match.group(1).strip()
+                        # 如果包含CCTV，则去除"-"、空格和中文字符。
+                        channel_name = process_string(channel_name)
                         channel_url = match.group(2).strip()
                         channels[current_category].append((channel_name, channel_url))
                     elif line:
