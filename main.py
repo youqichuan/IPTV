@@ -24,15 +24,21 @@ def parse_template(template_file):
 
     return template_channels
 
-# 去除部分字符串
-def process_string(input_string):
-    # 检查字符串是否包含"CCTV"
-    if "CCTV" in input_string:
-        # 使用正则表达式去除"-"、空格和中文字符
-        result = re.sub(r"[-\s\u4e00-\u9fa5]", "", input_string)
-        return result
+def change_cctv_channel(channel_name):   
+    # 将频道名称全部转换为大写
+    channel_name = channel_name.upper()
+    
+    # 定义正则表达式模式，央视频道中必定包含CCTV和至少1个数字，包含任意的-、空格和中文
+    pattern = r"CCTV[-]*\d+[\s\u4e00-\u9fa5]*"
+    
+    # 检查字符串是否符合模式
+    if re.search(pattern, channel_name):
+        # 去除 "-"、空格和中文字符
+        cleaned_channel_name = re.sub(r"[-\s\u4e00-\u9fa5]", "", channel_name)
+        return cleaned_channel_name
     else:
-        return input_string
+        # 如果不符合模式，返回原始字符串
+        return channel_name
 
 def fetch_channels(url):
     channels = OrderedDict()
@@ -56,7 +62,7 @@ def fetch_channels(url):
                         current_category = match.group(1).strip()
                         channel_name = match.group(2).strip()
                         # 如果包含CCTV，则去除"-"、空格和中文字符。
-                        channel_name = process_string(channel_name)
+                        channel_name = change_cctv_channel(channel_name)
                         if current_category not in channels:
                             channels[current_category] = []
                 elif line and not line.startswith("#"):
@@ -74,7 +80,7 @@ def fetch_channels(url):
                     if match:
                         channel_name = match.group(1).strip()
                         # 如果包含CCTV，则去除"-"、空格和中文字符。
-                        channel_name = process_string(channel_name)
+                        channel_name = change_cctv_channel(channel_name)
                         channel_url = match.group(2).strip()
                         channels[current_category].append((channel_name, channel_url))
                     elif line:
