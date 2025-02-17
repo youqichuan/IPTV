@@ -4,9 +4,17 @@ import logging
 from collections import OrderedDict
 from datetime import datetime
 import config
+import urllib.parse
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s', handlers=[logging.FileHandler("function.log", "w", encoding="utf-8"), logging.StreamHandler()])
 
+# 将demo.txt中的频道列表转换为list，结果如下
+'''
+template_channels = {
+    "央视频道": ["CCTV1", "CCTV2"],
+    "卫视频道": ["北京卫视","湖南卫视"]
+}
+'''
 def parse_template(template_file):
     template_channels = OrderedDict()
     current_category = None
@@ -40,6 +48,36 @@ def change_cctv_channel(channel_name):
         # 如果不符合模式，返回原始字符串
         return channel_name
 
+# 去除 URL 中的 $LR 及后面的字符
+def clean_url(url):
+    result = re.sub(r'\$LR.*', '', url)
+    if result.endswith("?"):
+        result = result[:-1]
+    return result
+
+# 检查 URL 是否包含特殊符号
+def is_valid_url(url):
+    if "【" in url or "】" in url or "#http" in url:
+        # logging.warning(f"URL contains invalid characters: {url}")
+        return False
+    return True
+
+# 提取域名的函数
+def extract_domain(url):
+    parsed_url = urllib.parse.urlparse(url)
+    return parsed_url.netloc  # 返回域名部分
+
+# 解析IPTV源地址，并抓取频道信息，结果如下
+'''
+{
+    "央视频道": [
+        ("CCTV1", "http://cctv1.com"),
+        ("CCTV2", "http://cctv2.com"),
+        ("CCTV3", "http://cctv3.com")
+    ],
+    "卫视频道": [("北京卫视", "http://bjtv.com")]
+}
+'''
 def fetch_channels(url):
     channels = OrderedDict()
 
@@ -67,7 +105,12 @@ def fetch_channels(url):
                             channels[current_category] = []
                 elif line and not line.startswith("#"):
                     channel_url = line.strip()
-                    if current_category and channel_name:
+                    # 清理url地址，去掉最后的？
+                    channel_url = clean_url(channel_url)
+                    # 增加url的判断，如果带有【】或者#http的需要进行过滤
+                    # 原始代码
+                    # if current_category and channel_name:
+                    if current_category and channel_name and is_valid_url(channel_url):
                         channels[current_category].append((channel_name, channel_url))
         else:
             for line in lines:
@@ -82,7 +125,13 @@ def fetch_channels(url):
                         # 如果包含CCTV，则去除"-"、空格和中文字符。
                         channel_name = change_cctv_channel(channel_name)
                         channel_url = match.group(2).strip()
-                        channels[current_category].append((channel_name, channel_url))
+                         # 清理url地址，去掉最后的？
+                        channel_url = clean_url(channel_url)
+                        # 增加url的判断，如果带有【】或者#http的需要进行过滤
+                        # 原始代码 
+                        # channels[current_category].append((channel_name, channel_url))
+                        if (channel_name, channel_url) not in set(channels[current_category]) and is_valid_url(channel_url):
+                            channels[current_category].append((channel_name, channel_url))
                     elif line:
                         channels[current_category].append((line, ''))
         if channels:
@@ -107,11 +156,15 @@ def match_channels(template_channels, all_channels):
     return matched_channels
 
 def filter_source_urls(template_file):
+    # demo.txt中的频道列表转换为list
     template_channels = parse_template(template_file)
+    # 读取配置中要抓取的IPTV源地址
     source_urls = config.source_urls
 
     all_channels = OrderedDict()
+    # 遍历IPTV源地址进行解析
     for url in source_urls:
+        # 解析IPTV源地址，并抓取频道信息
         fetched_channels = fetch_channels(url)
         for category, channel_list in fetched_channels.items():
             if category in all_channels:
@@ -145,13 +198,29 @@ def updateChannelUrlsM3U(channels, template_channels):
                     f_m3u.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
                     f_m3u.write(f"{announcement['url']}\n")
                     f_txt.write(f"{announcement['name']},{announcement['url']}\n")
-
+            # 遍历频道模板
             for category, channel_list in template_channels.items():
                 f_txt.write(f"{category},#genre#\n")
+                # 如果模板中的频道分组在抓取到的频道分组中
                 if category in channels:
+                    # 遍历模板中的频道列表
                     for channel_name in channel_list:
+                        # 如果模板中的频道列表在抓取到的频道列表
                         if channel_name in channels[category]:
-                            sorted_urls = sorted(channels[category][channel_name], key=lambda url: not is_ipv6(url) if config.ip_version_priority == "ipv6" else is_ipv6(url))
+                            # 对则对该频道的所有数据进行排序
+                            # 原始排序
+                            # sorted_urls = sorted(channels[category][channel_name], key=lambda url: not is_ipv6(url) if config.ip_version_priority == "ipv6" else is_ipv6(url))
+                            
+                            # 代码修改根据 IPv6/IPv4 优先级、域名和完整 URL 排序
+                            sorted_urls = sorted(
+                                channels[category][channel_name],
+                                key=lambda url: (
+                                    not is_ipv6(url) if config.ip_version_priority == "ipv6" else is_ipv6(url),  # IPv6/IPv4 优先级
+                                    extract_domain(url),  # 域名排序
+                                    url  # 完整 URL 排序
+                                )
+                            ) 
+                            
                             filtered_urls = []
                             for url in sorted_urls:
                                 if url and url not in written_urls and not any(blacklist in url for blacklist in config.url_blacklist):
@@ -169,7 +238,10 @@ def updateChannelUrlsM3U(channels, template_channels):
                                 else:
                                     base_url = url
 
-                                new_url = f"{base_url}{url_suffix}"
+                                # 原始代码，增加后缀
+                                # new_url = f"{base_url}{url_suffix}"
+                                # 修改代码，取消后缀
+                                new_url = f"{base_url}"
 
                                 f_m3u.write(f"#EXTINF:-1 tvg-id=\"{index}\" tvg-name=\"{channel_name}\" tvg-logo=\"https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/{channel_name}.png\" group-title=\"{category}\",{channel_name}\n")
                                 f_m3u.write(new_url + "\n")
