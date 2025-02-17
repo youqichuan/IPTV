@@ -51,6 +51,9 @@ def change_cctv_channel(channel_name):
 # 去除 URL 中的 $LR 及后面的字符
 def clean_url(url):
     result = re.sub(r'\$LR.*', '', url)
+    
+    # 移除 :80/，将:80/替换为/
+    result = re.sub(r':80/', '/', result)
     if result.endswith("?"):
         result = result[:-1]
     return result
@@ -111,7 +114,8 @@ def fetch_channels(url):
                     # 原始代码
                     # if current_category and channel_name:
                     if current_category and channel_name and is_valid_url(channel_url):
-                        channels[current_category].append((channel_name, channel_url))
+                        if (channel_name, channel_url) not in set(channels[current_category]):
+                            channels[current_category].append((channel_name, channel_url))
         else:
             for line in lines:
                 line = line.strip()
@@ -193,11 +197,11 @@ def updateChannelUrlsM3U(channels, template_channels):
 
         with open("live.txt", "w", encoding="utf-8") as f_txt:
             for group in config.announcements:
-                f_txt.write(f"{group['channel']},#genre#\n")
+                # f_txt.write(f"{group['channel']},#genre#\n")
                 for announcement in group['entries']:
-                    f_m3u.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
-                    f_m3u.write(f"{announcement['url']}\n")
-                    f_txt.write(f"{announcement['name']},{announcement['url']}\n")
+                    # f_m3u.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
+                    # f_m3u.write(f"{announcement['url']}\n")
+                    # f_txt.write(f"{announcement['name']},{announcement['url']}\n")
             # 遍历频道模板
             for category, channel_list in template_channels.items():
                 f_txt.write(f"{category},#genre#\n")
