@@ -197,8 +197,10 @@ def updateChannelUrlsM3U(channels, template_channels):
 
         with open("live.txt", "w", encoding="utf-8") as f_txt:
             for group in config.announcements:
+                pass
                 # f_txt.write(f"{group['channel']},#genre#\n")
                 for announcement in group['entries']:
+                    pass
                     # f_m3u.write(f"""#EXTINF:-1 tvg-id="1" tvg-name="{announcement['name']}" tvg-logo="{announcement['logo']}" group-title="{group['channel']}",{announcement['name']}\n""")
                     # f_m3u.write(f"{announcement['url']}\n")
                     # f_txt.write(f"{announcement['name']},{announcement['url']}\n")
