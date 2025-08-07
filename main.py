@@ -54,8 +54,8 @@ def clean_url(url):
     
     # 移除 :80/，将:80/替换为/
     result = re.sub(r':80/', '/', result)
-    if result.endswith("?"):
-        result = result[:-1]
+    # if result.endswith("?"):
+    #     result = result[:-1]
     return result
 
 # 检查 URL 是否包含特殊符号
