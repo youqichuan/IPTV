@@ -3123,8 +3123,6 @@ http://majian.ixiaobai.net:5540/udp/239.37.0.34:5540
 https://stream1.freetv.fun/0770bb3bc84ed4e330f1583e33152a2e4760aa48a1bf8cb1589c76bd0bd400f9.m3u8
 #EXTINF:-1 tvg-id="4" tvg-name="CCTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/CCTV4K.png" group-title="央视频道",CCTV4K
 https://stream1.freetv.fun/644644b9d904dc12d7334b92834fd65ccbf01fdb67011653831633e7323cf571.ctv
-#EXTINF:-1 tvg-id="5" tvg-name="CCTV4K" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/CCTV4K.png" group-title="央视频道",CCTV4K
-http://vip1.xinketongxun.fun:8082/tsfile/live/1026_1.m3u8
 #EXTINF:-1 tvg-id="1" tvg-name="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/北京卫视.png" group-title="卫视频道",北京卫视
 http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226450/1.m3u8?icpid=88888888&from=1&hms_devid=1012&vqe=3
 #EXTINF:-1 tvg-id="2" tvg-name="北京卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/北京卫视.png" group-title="卫视频道",北京卫视
@@ -3646,60 +3644,58 @@ https://ali-m-l.cztv.com/channels/lantian/channel001/1080p.m3u8?
 #EXTINF:-1 tvg-id="66" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://ali-vl.cztv.com/channels/lantian/channel001/360p.m3u8
 #EXTINF:-1 tvg-id="67" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
-http://ali-xwl.cztv.com/live/channel011080Plxw.m3u8
-#EXTINF:-1 tvg-id="68" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://alvin.ergotron.net:8000/udp/239.77.1.33:5146
-#EXTINF:-1 tvg-id="69" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="68" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://dms.yryyj.site:8188/udp/239.76.246.182:1234
-#EXTINF:-1 tvg-id="70" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="69" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://jxcbn.ws-cdn.gitv.tv/hls/ZHEJHD/index.m3u8?gMac=unknown&livodToken=c432ddc53d432b1aad13f81fcb7cc44cefdd3e33bb2a043c5af7c11f5d0eb76d_1720509114_604800&fromCDN=ws
-#EXTINF:-1 tvg-id="71" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="70" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://live.nctv.top/886/sxg.php?id=zjwsH265_4000
-#EXTINF:-1 tvg-id="72" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="71" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://mail.petzhu.top:7000/rtp/239.254.200.53:8036
-#EXTINF:-1 tvg-id="73" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="72" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221225612/index.m3u8
-#EXTINF:-1 tvg-id="74" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="73" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226339/index.m3u8
-#EXTINF:-1 tvg-id="75" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="74" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221225612/index.m3u8
-#EXTINF:-1 tvg-id="76" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="75" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://ottrrs.hl.chinamobile.com/TVOD/88888888/224/3221226339/index.m3u8
-#EXTINF:-1 tvg-id="77" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="76" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/0df862875bddfc375a0013f39f6b8787ba04f39160fa0449e305f8952e8209e9.m3u8
-#EXTINF:-1 tvg-id="78" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="77" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/11fc10d9b4476ff868ef1efabfd865c3b4dad45404751880cd469332b0488a19.m3u8
-#EXTINF:-1 tvg-id="79" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="78" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/25a68374e38b69e4e0daef2fd294dc23f4a597d1e4f8dfd4ca5f447359b5cf17.m3u8
-#EXTINF:-1 tvg-id="80" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="79" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/2d006495025116b5eeae6ac133fca1ea2ed38b48c255994add6b2153026222f5.m3u8
-#EXTINF:-1 tvg-id="81" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="80" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/2e3a01b886780ceca10b44bb6cdb57413757275a6fdcb083800db996bc2f81e3.m3u8
-#EXTINF:-1 tvg-id="82" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="81" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/3674992f7e26c934871ca5ce9cdcf0be39a13a863c537f76b3ac22cc10e61e11.m3u8
-#EXTINF:-1 tvg-id="83" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="82" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/3bcf99d2946ccf8b6feabbc8298a4630913b805d5965a209a4d2de2ae9ffc79f.m3u8
-#EXTINF:-1 tvg-id="84" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="83" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/584a8d8dcc1704d3df7b0f7153ecea98303b2df8daae3897674bbb03b2abbb39.m3u8
-#EXTINF:-1 tvg-id="85" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="84" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/5ffc0c126720cc8b92d57ecd040c3eab0f42b12a63351a984b59f3a6a476735e.m3u8
-#EXTINF:-1 tvg-id="86" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="85" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/72a0e9b3f0b9ffe0c25538f7c7a247ad13b6c88315ee5e0d9d2b8c48dd089067.m3u8
-#EXTINF:-1 tvg-id="87" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="86" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/98c2b365be87cf4c2159356795b46f802156d44b9752f5948ae7f2b3b7f323f0.m3u8
-#EXTINF:-1 tvg-id="88" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="87" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/9db0b177cf33e55f518fee70eb5b8aca7d6d592cb2f228931613f92024e4dcee.m3u8
-#EXTINF:-1 tvg-id="89" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="88" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/bd399dd2f8b8ba3112838aec3794ea1f33993bceb20f2eff230b8d62409199c7.m3u8
-#EXTINF:-1 tvg-id="90" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="89" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/bd540d6ea7715caff181ae644e1772b8c6a023f0eb172e5fa69bec70f4dfecfe.m3u8
-#EXTINF:-1 tvg-id="91" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="90" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/bf470a7853a795a94f57d26c21dc39bc604aa79ca5632a2de0197d27bde7ac2d.m3u8
-#EXTINF:-1 tvg-id="92" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="91" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/d35587d65e53779a3e25010f6839792d5a4430a22824793ec4b997e2c4ab3098.m3u8
-#EXTINF:-1 tvg-id="93" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="92" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 https://stream1.freetv.fun/de894822c716882fdc3ccde13a1df6ab170cc15d56ed820dd683a6fd9a9ac182.m3u8
-#EXTINF:-1 tvg-id="94" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
+#EXTINF:-1 tvg-id="93" tvg-name="浙江卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/浙江卫视.png" group-title="卫视频道",浙江卫视
 http://www.zzlag.top:9087/tsfile/live/0124_1.m3u8?key=txiptv
 #EXTINF:-1 tvg-id="1" tvg-name="江苏卫视" tvg-logo="https://gcore.jsdelivr.net/gh/yuanzl77/TVlogo@master/png/江苏卫视.png" group-title="卫视频道",江苏卫视
 http://[2409:8087:1a01:df::4077]/ottrrs.hl.chinamobile.com/PLTV/88888888/224/3221226310/index.m3u8
