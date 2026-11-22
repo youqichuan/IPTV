@@ -732,7 +732,6 @@ CCTV8,http://119.62.36.174:9901/tsfile/live/0008_1.m3u8?key=txiptv&playlive=0&au
 CCTV8,http://120.234.5.29:6000/udp/239.20.0.31:3280
 CCTV8,http://123.163.55.234:9901/tsfile/live/0008_1.m3u8?key=txiptv
 CCTV8,http://123.189.36.39:9901/tsfile/live/1007_1.m3u8?key=txiptv&playlive=1&authid=0
-CCTV8,http://124.165.251.82:85/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV8,http://124.165.251.82:9999/tsfile/live/0008_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV8,http://14.29.76.30:9901/tsfile/live/1014_1.m3u8?key=txiptv
 CCTV8,http://171.108.239.79:8181/tsfile/live/1034_1.m3u8?key=txiptv&playlive=1&authid=0
