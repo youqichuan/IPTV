@@ -1092,6 +1092,7 @@ CCTV12,http://120.234.5.29:6000/udp/239.20.0.201:2200
 CCTV12,http://123.163.55.234:9901/tsfile/live/0012_1.m3u8?key=txiptv
 CCTV12,http://124.128.73.58:9901/tsfile/live/0012_1.m3u8?key=txiptv
 CCTV12,http://124.128.73.58:9901/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
+CCTV12,http://124.165.251.82:85/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV12,http://124.165.251.82:9999/tsfile/live/0012_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV12,http://171.108.239.79:8181/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
 CCTV12,http://171.108.239.98:8181/tsfile/live/1038_1.m3u8?key=txiptv&playlive=1&authid=0
